@@ -11,3 +11,9 @@ Nestjs (8.0.0)
 *DEPENDENCIES:*
 typeorm (0.2.38)
 sqlite3 (5.0.2)
+
+**_FRONTEND_**
+*FRAMEWORK:*
+Angular (12.2.0)
+*UI:*
+Angular Material

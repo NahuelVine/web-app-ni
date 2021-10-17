@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title style="text-align: center;">TO-DO LIST</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 70%; padding-left: 10px;">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <mat-checkbox *matCellDef="let element">{{element.id}}</mat-checkbox>
+      </ng-container>
+
+      <ng-container matColumnDef="content">
+        <th mat-header-cell *matHeaderCellDef>CONTENT</th>
+        <td mat-cell *matCellDef="let element">{{element.content}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>ACTIONS</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button (click)="deleteList(element.id)" color="secondary">DELETE ITEM</button>
+          <button mat-raised-button (click)="selectList(element)" color="secondary">SELECT ITEM</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>CREATE TO-DO ITEM</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form #f ="ngForm" class="mat-elevation-z8" style="width: 70%; padding: 5px;">
+
+      <mat-form-field>
+        <input matInput placeholder="Content" name="content" [(ngModel)] = "list.content" required>
+      </mat-form-field>
+
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions>
+      <button  mat-raised-button *ngIf="!list.id" (click)="createList(f)" color="primary">SAVE ITEM</button>
+      <button  mat-raised-button *ngIf="list.id" (click)="updateList(f)" color="primary">UPDATE ITEM</button>
+      <button  mat-raised-button (click)="newList()" color="primary">NEW...</button>
+
+  </mat-card-actions>
+</mat-card>
