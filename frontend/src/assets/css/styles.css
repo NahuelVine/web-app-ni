@@ -1,0 +1,17 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+  text-align: center;
+}
+
+.mat-elevation-z8{
+  width: 75%;
+  margin-left: 15%;
+}
+
+.items{
+  padding-left: 5%;
+}
+

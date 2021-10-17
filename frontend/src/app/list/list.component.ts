@@ -10,7 +10,7 @@ import { List } from '../list';
 })
 export class ListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'content'];
+  displayedColumns: string[] = ['content', 'actions'];
   dataSource: any[] = [];
   list: any = {};
   constructor(private apiService: ApiService) { }
@@ -23,10 +23,6 @@ export class ListComponent implements OnInit {
 
   selectList(list: any){
     this.list = list;
-  }
-
-  newList(){
-    this.list = {};
   }
 
   createList(item: any){

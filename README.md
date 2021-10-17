@@ -16,4 +16,5 @@ sqlite3 (5.0.2)
 *FRAMEWORK:*
 Angular (12.2.0)
 *UI:*
-Angular Material
+Angular Materials
+CSS

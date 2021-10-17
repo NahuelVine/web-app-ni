@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -29,6 +30,7 @@ import { ListComponent } from './list/list.component';
     MatTableModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatIconModule,
     HttpClientModule,
     FormsModule
   ],
